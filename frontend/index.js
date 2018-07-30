@@ -5,7 +5,7 @@ Ext.onReady(function(){
     	layout:'border',
     	items:[{
     		region:'north',
-    		html:'head'
+    		contentEl:'head'
     	},{
     		region:'center',
     		html:'grid'
@@ -14,7 +14,7 @@ Ext.onReady(function(){
     		html:'form'
     	},{
     		region:'south',
-    		html:'foot'
+    		contentUl:'foot'
     	}]
     });
 });
