@@ -83,26 +83,30 @@ class DbUtils{
 	}
 
 	public function __destruct(){
-			oci_close(self::$conn);
 			self::$_instance = null;
 	}
 }
 
 
-try{
-	$conn = new PDO("mysql:host=localhost;dbname=student","root","root"); //初始化一个PDO对
-}catch (PDOException $e) {
-    die ("Error!: " . $e->getMessage());
-}
+// try{
+// 	$conn = new PDO("mysql:host=localhost;dbname=student","root","root"); //初始化一个PDO对
+// }catch (PDOException $e) {
+//     die ("Error!: " . $e->getMessage());
+// }
 
-$sql = 'SELECT * FROM student';
-foreach ($conn->query($sql) as $row) {
-	var_dump($row);
-}
+// $sql = 'SELECT * FROM student';
+// foreach ($conn->query($sql) as $row) {
+// 	var_dump($row);
+// }
 
-echo 'hhhh';
+// echo 'hhhh';
 
 
+$sql = "SELECT * FROM student";
+$db = DbUtils::getDB();
+$out = $db->gets($sql);
+
+var_dump($out);
 
 
 
