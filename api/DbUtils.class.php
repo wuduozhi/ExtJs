@@ -66,7 +66,7 @@ class DbUtils{
 	// }
 
 	public function gets($sql,$array=array()){
-			$sth = $conn->prepare($sql);
+			$sth = self::$conn->prepare($sql);
 
 			
 			foreach ($array as $key => $value) {
@@ -105,7 +105,7 @@ class DbUtils{
 $sql = "SELECT * FROM student";
 $db = DbUtils::getDB();
 echo 'hhhh';
-exit();
+// exit();
 $out = $db->gets($sql);
 
 var_dump($out);
