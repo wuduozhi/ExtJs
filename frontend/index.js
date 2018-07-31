@@ -14,7 +14,7 @@ Ext.onReady(function(){
     		html:'form'
     	},{
     		region:'south',
-    		contentUl:'foot'
+    		contentEl:'foot'
     	}]
     });
 });
