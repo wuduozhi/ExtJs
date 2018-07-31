@@ -24,7 +24,7 @@ Ext.onReady(function(){
         autoLoad: true,
         proxy:{
             type:'ajax',
-            url:'../api/page.php',
+            url:'http://wduozhi.xyz/ExtJs/api/page.php',
             reader:{
                 type:'json',
                 totalProperty:'totalCount',
