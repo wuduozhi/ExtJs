@@ -18,8 +18,8 @@ $db = DbUtils::getDB();
 $out = $db->get($sql);
 
 // var_dump($out);
-$res['totalProperty'] = count($out);
-$res['root'] = $out;
+$res['totalCount'] = count($out);
+$res['result'] = $out;
 echo json_encode($res);
 
 ?>
