@@ -102,13 +102,13 @@ class DbUtils{
 // echo 'hhhh';
 
 
-$sql = "SELECT * FROM student";
-$db = DbUtils::getDB();
-echo 'hhhh';
-// exit();
-$out = $db->gets($sql);
+// $sql = "SELECT * FROM student";
+// $db = DbUtils::getDB();
+// echo 'hhhh';
+// // exit();
+// $out = $db->gets($sql);
 
-var_dump($out);
+// var_dump($out);
 
 
 
