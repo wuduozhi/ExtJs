@@ -1,7 +1,7 @@
 <?php
 include_once("DbUtils.class.php");
 
-echo "hello";exit();
+//echo "hello";exit();
 
 $sql = "SELECT * FROM student";
 $db = DbUtils::getDB();
