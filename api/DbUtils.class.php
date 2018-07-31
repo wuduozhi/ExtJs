@@ -89,16 +89,13 @@ class DbUtils{
 }
 
 
+try{
+	$conn = new PDO("mysql:host=localhost;dbname=student","root","root"); //初始化一个PDO对
+}catch (PDOException $e) {
+    die ("Error!: " . $e->getMessage());
+}
 
-
-
-$db = DbUtils::getDB();
-$sql = "SELECT * FROM student";
-
-$out = $db->gets($sql);
-
-var_dump($out);
-
+echo 'hhhh';
 
 
 
