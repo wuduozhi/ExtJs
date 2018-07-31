@@ -6,7 +6,7 @@ class DbUtils{
 	protected static $host = 'localhost';
 	protected static $charset = 'utf8';
 	protected static $dbName = 'student';
-	protected static $dsn="$dbms:host=$host;dbname=$dbName";
+	protected static $dsn="mysql:host=localhost;dbname=student";
 	protected static $conn;
 
 
@@ -25,7 +25,7 @@ class DbUtils{
 		if(!isset(self::$_instance))
 		{
 			try{
-				self::$conn = new PDO($dsn, $user, $passwd); //初始化一个PDO对
+				self::$conn = new PDO("mysql:host=localhost;dbname=student","root","root"); //初始化一个PDO对
 				$c=__CLASS__;
 				self::$_instance = new $c;
 			}catch (PDOException $e) {
@@ -92,8 +92,12 @@ class DbUtils{
 
 
 
+$db = DbUtils::getDB();
+$sql = "SELECT * FROM student";
 
+$out = $db->gets($sql);
 
+var_dump($out);
 
 
 

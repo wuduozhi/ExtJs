@@ -1,10 +1,9 @@
 <?php
-require_once("DbUtils.class.php");
+include_once("DbUtils.class.php");
 
-
-$db = DbUtils::getDB();
-
-$sql = "SELECT * FROM studnet";
+//$db = DbUtils::getDB();
+echo "hello";exit();
+$sql = "SELECT * FROM student";
 
 $out = $db->gets($sql);
 
