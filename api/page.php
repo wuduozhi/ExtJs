@@ -17,7 +17,7 @@ $data[':count'] = ($page-1)*$data[':num'];
 $db = DbUtils::getDB();
 $out = $db->get($sql);
 
-var_dump($out);
-
+// var_dump($out);
+echo json_encode($out);
 
 ?>

@@ -1,3 +1,21 @@
+
+Ext.onReady(function(){
+    var viewport = new Ext.Viewport({
+        layout:'border',
+        items:[{
+            region:'north',
+            contentEl:'head'
+        },grid,{
+            region:'east',
+            html:'form'
+        },{
+            region:'south',
+            contentEl:'foot'
+        }]
+    });
+});
+
+
 // Ext.require('Ext.tab.*');
 var sexRenderer = function(value){
     if(value == 1){
@@ -67,18 +85,18 @@ var grid = new Ext.grid.GridPanel({
 });
 
 
-Ext.onReady(function(){
-    var viewport = new Ext.Viewport({
-        layout:'border',
-        items:[{
-            region:'north',
-            contentEl:'head'
-        },grid,{
-            region:'east',
-            html:'form'
-        },{
-            region:'south',
-            contentEl:'foot'
-        }]
-    });
-});
+// Ext.onReady(function(){
+//     var viewport = new Ext.Viewport({
+//         layout:'border',
+//         items:[{
+//             region:'north',
+//             contentEl:'head'
+//         },grid,{
+//             region:'east',
+//             html:'form'
+//         },{
+//             region:'south',
+//             contentEl:'foot'
+//         }]
+//     });
+// });
