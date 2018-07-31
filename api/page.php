@@ -9,7 +9,7 @@ $data[':num'] = isset($_GET['num']) ? $_GET['num'] : 10;
 
 $data[':count'] = ($page-1)*$data[':num']; 
 
-$sql = "select * from student limit  :count,:num ";
+$sql = "SELECT * FROM student LIMIT  :count,:num ";
 
 if (isset($_GET['sort'])){
 	$data[':sort'] = $_GET['sort'];
