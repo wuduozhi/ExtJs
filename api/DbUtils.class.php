@@ -47,8 +47,12 @@ class DbUtils{
 
 	public function get($sql){
 		$sth = $conn->query($sql);
-		$out = $sth->fetch(PDO::FETCH_ASSOC);
-		return $out;
+		//取结果数据
+		$outs = array();
+		while ($out = $sth->fetch(PDO::FETCH_ASSOC)) {
+			$outs[] = $out;
+		}
+		return $outs;
 	}
 
 	/*
