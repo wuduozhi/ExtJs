@@ -95,6 +95,11 @@ try{
     die ("Error!: " . $e->getMessage());
 }
 
+$sql = 'SELECT * FROM student';
+foreach ($conn->query($sql) as $row) {
+	var_dump($row);
+}
+
 echo 'hhhh';
 
 
