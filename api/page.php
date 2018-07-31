@@ -8,11 +8,11 @@ $data[':num'] = isset($_GET['num']) ? $_GET['num'] : 10;
 
 $data[':count'] = ($page-1) * $data[':num']; 
 
-// $sql = "SELECT * FROM student LIMIT  0,12 ";
+$sql = "SELECT * FROM student LIMIT  0,12 ";
 
 $data[':count'] = ($page-1)*$data[':num']; 
 
-$sql = "SELECT * FROM student LIMIT  $data[':count'],$data[':num'] ";
+//$sql = "SELECT * FROM student LIMIT  $data[':count'],$data[':num'] ";
 
 $db = DbUtils::getDB();
 $out = $db->get($sql);
